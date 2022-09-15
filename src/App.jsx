@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Movie from './components/Movie';
 
 
 const App = () => {
@@ -17,7 +18,13 @@ const App = () => {
   }, []);
 
   return (
-    <div>App</div>
+    <div>
+      <div>
+        {popular.map((movie) => (
+          <Movie key={ movie.id } movie={ movie } />
+        ))}
+      </div>
+    </div>
   );
 };
 
