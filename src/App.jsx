@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Filter from './components/Filter';
 import Movie from './components/Movie';
 import './App.css';
@@ -30,10 +30,15 @@ const App = () => {
         activeGenre={ activeGenre }
         setActiveGenre={ setActiveGenre }
       />
-      <motion.div layout className='popular-movies'>
-        {filtered.map((movie) => (
-          <Movie key={ movie.id } movie={ movie } />
-        ))}
+      <motion.div
+        layout 
+        className='popular-movies'
+      >
+        <AnimatePresence>
+          {filtered.map((movie) => (
+            <Movie key={ movie.id } movie={ movie } />
+          ))}
+        </AnimatePresence>
       </motion.div>
     </div>
   );
