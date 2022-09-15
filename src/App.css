@@ -16,3 +16,21 @@ img {
 h2 {
     font-size: 0.8rem;
 }
+
+.filter-container button {
+    margin-right: 2rem;
+    min-width: 5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: white;
+    color: rgb(7, 180, 243);
+    border-radius: 1rem;
+    border: 2px solid rgb(4, 129, 207);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: rgb(7, 180, 243);
+    color: white;
+}
