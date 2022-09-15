@@ -14,7 +14,7 @@ const Filter = ({ setActiveGenre, activeGenre, setFiltered, popular }) => {
 
         setFiltered(filtered);
 
-    }, [activeGenre]);
+    }, [activeGenre, popular]);
 
   return (
     <div className="filter-container">

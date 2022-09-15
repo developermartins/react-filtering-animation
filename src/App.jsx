@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import { motion } from 'framer-motion';
 import Filter from './components/Filter';
 import Movie from './components/Movie';
+import './App.css';
 
 
 const App = () => {
