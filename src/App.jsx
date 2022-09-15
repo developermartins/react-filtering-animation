@@ -12,7 +12,7 @@ const App = () => {
   const [activeGenre, setActiveGenre] = useState(0);
 
   const fetchPopularMovies = async () => {
-    const moviesData = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=ff1c97e901f41b87534018df4bd86f50&language=en-US&page=1');
+    const moviesData = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`);
 
     const movies = await moviesData.json();
     setPopular(movies.results);
