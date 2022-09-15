@@ -30,11 +30,11 @@ const App = () => {
         activeGenre={ activeGenre }
         setActiveGenre={ setActiveGenre }
       />
-      <div className='popular-movies'>
+      <motion.div layout className='popular-movies'>
         {filtered.map((movie) => (
           <Movie key={ movie.id } movie={ movie } />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
